@@ -1,0 +1,31 @@
+@mixin container($size: default){
+	width: 100%;
+	padding: 0;
+	margin: 0 auto;
+	@include fluid($s, $xxl, $container-padding-min, $container-padding-max, 'padding-left');
+	@include fluid($s, $xxl, $container-padding-min, $container-padding-max, 'padding-right');
+
+	@if $size == default {
+		max-width: $container-default;
+	} @else if $size == small {
+		max-width: $container-small;
+	} @else if $size == large {
+		max-width: $container-large;
+	} @else if $size == full {
+		max-width: 100%;
+	}
+}
+
+%container,
+.container {
+	@include container;
+	&--small {
+		@include container(small);
+	}
+	&--large {
+		@include container(large);
+	}
+	&--full {
+		@include container(full);
+	}
+}

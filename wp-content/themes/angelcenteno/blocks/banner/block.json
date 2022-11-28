@@ -1,0 +1,14 @@
+{
+    "name": "acf/banner",
+    "title": "Banner",
+    "description": "A custom banner block.",
+    "style": [ "file:./banner.scss" ],
+    "category": "theme-blocks",
+    "icon": "cover-image",
+    "keywords": ["banner", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "banner.php"
+    },
+    "align": "full"
+}

@@ -1,0 +1,40 @@
+.block-editor .editor-styles-wrapper {
+	font-family: inherit;
+	.wp-block {
+		max-width: 100%;
+	}
+	.block-editor-button-block-appender {
+		margin: auto;
+	}
+}
+
+.block-editor-block-list__layout {
+	z-index: 1;
+}
+
+.edit-post-sidebar {
+	width: auto;
+
+	@include bp($m) {
+		width: 30vw;
+	}
+}
+
+.block-badge {
+	background-color: #1a89c0; // wordpress blue
+	color: #fff;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	display: inline-block;
+	padding: 5px 10px;
+	line-height: 1;
+	letter-spacing: 0.03em;
+}
+
+.acf-block-component.acf-block-panel {
+	padding: 16px;
+}

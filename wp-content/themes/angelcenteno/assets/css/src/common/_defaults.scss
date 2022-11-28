@@ -1,0 +1,103 @@
+body {
+	background-color: $primary;
+	color: $white;
+	line-height: 1.2;
+	&.hidden {
+		visibility: hidden;
+		display: none;
+	}
+}
+
+p, li {
+	@include fluid($s, $xl, 10px, 20px, 'margin-bottom');
+	margin-block-start: 0;
+	
+	&:last-child,
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+em {
+	font-style: italic;
+	// margin-right: 6px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+small {
+    font-size: 70%;
+}
+
+.skip_to_main_link {
+	display: block;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	position: fixed;
+	border-bottom: 1px solid #333;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #fff;
+	z-index: 1000;
+	color: #000;
+	font-weight: bold;
+	font-size: 18px;
+
+	&:focus {
+		padding: 20px 40px;
+		width: 100%;
+		height: auto;
+	}
+}
+
+.cookie-banner {
+	color: #fff;
+	background-color: #333;
+
+	> .container {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	p {
+		margin: 0;
+		margin-right: 20px;
+	}
+}
+
+%screen-reader-text,
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal !important;
+	&:focus {
+		background-color: #eee;
+		clip: auto !important;
+		clip-path: none;
+		color: #444;
+		display: block;
+		font-size: 1em;
+		height: auto;
+		left: 5px;
+		line-height: normal;
+		padding: 15px 23px 14px;
+		text-decoration: none;
+		top: 5px;
+		width: auto;
+		z-index: 100000; /* Above WP toolbar. */
+	}
+}

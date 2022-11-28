@@ -1,0 +1,8 @@
+.site-header {
+    &__container {
+        @include container(large);
+    }
+    &__logo {
+        font-family: 'Rubik Distressed', cursive;
+    }
+}

@@ -1,0 +1,20 @@
+.bloc.fpo {
+	border: 5px solid #666;
+	background: #ccc !important;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	padding: 30px;
+	min-height: 300px;
+
+	*:not(.fpo-title) {
+		display: none !important;
+	}
+
+	.fpo-title {
+		text-transform: uppercase;
+		font-size: 30px;
+		color: #666;
+	}
+}

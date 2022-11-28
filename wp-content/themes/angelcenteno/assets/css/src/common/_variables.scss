@@ -1,0 +1,41 @@
+// Breakpoints
+$xxl: 1760px; //full site width on XD
+$xl: 1200px;
+$l: 1024px;
+$m: 768px;
+$s: 500px;
+$xs: 320px; // Smallest phone possible
+
+// Container Size
+$container-default: $xl;
+$container-large: $xxl;
+$container-small: $l;
+$container-padding-max: 75px;
+$container-padding-min: 25px;
+
+// Fonts
+$font-default: 'Arial', sans-serif;
+$font-primary: 'Arial', sans-serif;
+$font-secondary: 'Arial', sans-serif;
+$font-headings: $font-default;
+
+// Blocks
+$rpm-block-spacing: 16px;
+
+// Colors
+$black: #000;
+$gray-darker: #2d2e32;
+$gray-dark: #2d2e32;
+$gray: #878787;
+$gray-light: #bbbbbb;
+$gray-lighter: #dadada;
+$white: #fff;
+
+$red: #B01A1A;
+
+$primary: $gray-darker;
+$secondary: #70e3a1;
+
+// Misc
+$speed: 200ms;
+$easing: ease-in-out;

@@ -1,0 +1,187 @@
+%block-hidden {
+    position: relative;
+    &::after {
+        pointer-events: none;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 9999;
+        background-color: black;
+        color: white;
+        padding: 4px 10px;
+        font-size: 10px;
+    }
+}
+
+.bloc {
+
+    // Visibility
+    &--hm {
+        display: none;
+        @include bp($m) {
+            display: block; 
+        }
+        .acf-block-preview & {
+            display: block !important;
+            @extend %block-hidden;
+            &:after {
+                content: 'Hidden in Mobile';
+                top: 5px;
+            }
+        }
+        &.rpmblock--hd {
+            display: none;
+            @include bp($m) {
+                display: none; 
+            }
+        }
+    }
+    &--hd {
+        display: block;
+        @include bp($m) {
+           display: none; 
+        }
+        .acf-block-preview & {
+            display: block !important;
+            @extend %block-hidden;
+            &:before {
+                content: 'Hidden in Desktop';
+                top: 25px;
+            }
+        }
+        &.rpmblock--hm {
+            display: none;
+            @include bp($m) {
+                display: none; 
+            }
+        }
+    }
+
+    // Backgrounds
+
+    // Paddings
+    &--pt-none {
+        padding-top: 0px;
+    }
+    &--pt-1x {
+        @include fluid($s, $xxl, math.div($rpm-block-spacing,2), $rpm-block-spacing, 'padding-top');
+    }
+    &--pt-2x {
+        @include fluid($s, $xxl, $rpm-block-spacing, $rpm-block-spacing*2, 'padding-top');
+    }
+    &--pt-3x {
+        @include fluid($s, $xxl, $rpm-block-spacing*1.5, $rpm-block-spacing*3, 'padding-top');
+    }
+    &--pt-4x { 
+        @include fluid($s, $xxl, $rpm-block-spacing*2, $rpm-block-spacing*4, 'padding-top');
+    }
+    &--pt-5x {
+        @include fluid($s, $xxl, $rpm-block-spacing*2.5, $rpm-block-spacing*5, 'padding-top');
+    }
+    &--pt-6x {
+        @include fluid($s, $xxl, $rpm-block-spacing*3, $rpm-block-spacing*6, 'padding-top'); 
+    }
+    &--pt-7x {
+        @include fluid($s, $xxl, $rpm-block-spacing*3.5, $rpm-block-spacing*7, 'padding-top'); 
+    }
+    &--pt-8x {
+        @include fluid($s, $xxl, $rpm-block-spacing*4, $rpm-block-spacing*8, 'padding-top'); 
+    }
+    &--pt-9x {
+        @include fluid($s, $xxl, $rpm-block-spacing*4.5, $rpm-block-spacing*9, 'padding-top'); 
+    }
+
+    &--pb-none {
+        padding-bottom: 0px;
+    }
+    &--pb-1x {
+        @include fluid($s, $xxl, math.div($rpm-block-spacing,2), $rpm-block-spacing, 'padding-bottom');
+    }
+    &--pb-2x {
+        @include fluid($s, $xxl, $rpm-block-spacing, $rpm-block-spacing*2, 'padding-bottom');
+    }
+    &--pb-3x {
+        @include fluid($s, $xxl, $rpm-block-spacing*1.5, $rpm-block-spacing*3, 'padding-bottom');
+    }
+    &--pb-4x {
+        @include fluid($s, $xxl, $rpm-block-spacing*2, $rpm-block-spacing*4, 'padding-bottom');
+    }
+    &--pb-5x {
+        @include fluid($s, $xxl, $rpm-block-spacing*2.5, $rpm-block-spacing*5, 'padding-bottom');
+    }
+    &--pb-6x {
+        @include fluid($s, $xxl, $rpm-block-spacing*3, $rpm-block-spacing*6, 'padding-bottom');
+    }
+    &--pb-7x {
+        @include fluid($s, $xxl, $rpm-block-spacing*3.5, $rpm-block-spacing*7, 'padding-bottom'); 
+    }
+    &--pb-8x {
+        @include fluid($s, $xxl, $rpm-block-spacing*4, $rpm-block-spacing*8, 'padding-bottom'); 
+    }
+    &--pb-9x {
+        @include fluid($s, $xxl, $rpm-block-spacing*4.5, $rpm-block-spacing*9, 'padding-bottom'); 
+    }
+
+    // Margins
+    &--mt-none {
+        margin-top: 0px;
+    }
+    &--mt-1x {
+        @include fluid($s, $xxl, math.div($rpm-block-spacing,2), $rpm-block-spacing, 'margin-top');
+    }
+    &--mt-2x {
+        @include fluid($s, $xxl, $rpm-block-spacing, $rpm-block-spacing*2, 'margin-top');
+    }
+    &--mt-3x {
+        @include fluid($s, $xxl, $rpm-block-spacing*1.5, $rpm-block-spacing*3, 'margin-top');
+    }
+    &--mt-4x {
+        @include fluid($s, $xxl, $rpm-block-spacing*2, $rpm-block-spacing*4, 'margin-top');
+    }
+    &--mt-5x {
+        @include fluid($s, $xxl, $rpm-block-spacing*2.5, $rpm-block-spacing*5, 'margin-top');
+    }
+    &--mt-6x {
+        @include fluid($s, $xxl, $rpm-block-spacing*3, $rpm-block-spacing*6, 'margin-top');
+    }
+    &--mt-7x {
+        @include fluid($s, $xxl, $rpm-block-spacing*3.5, $rpm-block-spacing*7, 'margin-top'); 
+    }
+    &--mt-8x {
+        @include fluid($s, $xxl, $rpm-block-spacing*4, $rpm-block-spacing*8, 'margin-top'); 
+    }
+    &--mt-9x {
+        @include fluid($s, $xxl, $rpm-block-spacing*4.5, $rpm-block-spacing*9, 'margin-top'); 
+    }
+
+    &--mb-none {
+        margin-bottom: 0px;
+    }
+    &--mb-1x {
+        @include fluid($s, $xxl, math.div($rpm-block-spacing,2), $rpm-block-spacing, 'margin-bottom');
+    }
+    &--mb-2x {
+        @include fluid($s, $xxl, $rpm-block-spacing, $rpm-block-spacing*2, 'margin-bottom');
+    }
+    &--mb-3x {
+        @include fluid($s, $xxl, $rpm-block-spacing*1.5, $rpm-block-spacing*3, 'margin-bottom');
+    }
+    &--mb-4x {
+        @include fluid($s, $xxl, $rpm-block-spacing*2, $rpm-block-spacing*4, 'margin-bottom');
+    }
+    &--mb-5x {
+        @include fluid($s, $xxl, $rpm-block-spacing*2.5, $rpm-block-spacing*5, 'margin-bottom');
+    }
+    &--mb-6x {
+        @include fluid($s, $xxl, $rpm-block-spacing*3, $rpm-block-spacing*6, 'margin-bottom');
+    }
+    &--mb-7x {
+        @include fluid($s, $xxl, $rpm-block-spacing*3.5, $rpm-block-spacing*7, 'margin-bottom'); 
+    }
+    &--mb-8x {
+        @include fluid($s, $xxl, $rpm-block-spacing*4, $rpm-block-spacing*8, 'margin-bottom'); 
+    }
+    &--mb-9x {
+        @include fluid($s, $xxl, $rpm-block-spacing*4.5, $rpm-block-spacing*9, 'margin-bottom'); 
+    }
+}

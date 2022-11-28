@@ -1,0 +1,14 @@
+{
+    "name": "acf/*BLOCK_TYPE*",
+    "title": "*BLOCK_NAME*",
+    "description": "A custom *BLOCK_TYPE* block.",
+    "style": [ "file:./*BLOCK_TYPE*.scss" ],
+    "category": "*BLOCK_CAT*",
+    "icon": "*BLOCK_ICON*",
+    "keywords": ["*BLOCK_TYPE*", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "*BLOCK_TYPE*.php"
+    },
+    "align": "full"
+}

@@ -1,0 +1,19 @@
+.bloc--banner {
+    &__content-tags {
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-flow: row wrap;
+        }
+        li {
+            background-color: $secondary;
+            color: $primary;
+            border-radius: 2px;
+            margin: 0 10px 0 0;
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}
