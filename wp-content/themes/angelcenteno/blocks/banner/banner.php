@@ -31,7 +31,7 @@ $block_class = 'bloc--' . $blockName;
 		<span class="block-badge"><?= $block['title'] ?></span>
 	<?php endif; ?>
 
-	<div class="<?= $block_class; ?>__container container--<?= $container_size ?? 'default'; ?>">
+	<div class="<?= $block_class; ?>__container container container--<?= $container_size ?? 'default'; ?>">
 		<div class="bloc--banner__content">
 			<?php if($banner_tags) : ?>
 			<div class="bloc--banner__content-tags">

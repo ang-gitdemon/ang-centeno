@@ -1,0 +1,25 @@
+.bloc--filtered-grid {
+    &__container {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    &__side,
+    &__main {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
+    &__side {
+    }
+    &__main {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    &__each {
+        flex: 0 1 100%;
+        max-width: 100%;
+        @include bp($m) {
+            max-width: 50%;
+        }
+    }
+}

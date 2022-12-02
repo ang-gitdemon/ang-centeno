@@ -1,5 +1,6 @@
 
 <?php
+	global $post;
     $header_type = get_field('header_type') ? get_field('header_type') : 'default';
 	$head_scripts = get_field('head_scripts', 'option') ?? '';
 	$body_scripts = get_field('body_scripts', 'option') ?? '';
@@ -20,16 +21,18 @@
     <?= $head_scripts; ?>
 </head>
 
-<body <?= body_class($additional_classes); ?>>
+<body <?= body_class($additional_classes); ?> data-barba="wrapper">
+
+	<?= get_template_part('/inc/components/sprite'); ?>
 
     <?php do_action('after_body_open_tag'); ?>
 	
     <?= $body_scripts; ?>
 
-    <a href="#rpmMainContent" class="skip_to_main_link"><?= get_field('skip_content_label', 'option') ?></a>
+    <a href="#site" class="skip_to_main_link"><?= get_field('skip_content_label', 'option') ?></a>
 
 	<?= get_template_part('/inc/components/gdpr'); ?>
 
     <?= get_template_part('/inc/header/header', $header_type); ?>
 
-    <main class="site-main">
+    <main class="site-main" data-barba="container" data-barba-namespace="<?= $post->post_name; ?>">

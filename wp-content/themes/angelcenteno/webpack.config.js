@@ -7,6 +7,8 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 // clean out build dir in-between builds
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
+
 
 // console.log(glob);
 
@@ -25,6 +27,7 @@ module.exports = [
 			filename: './assets/js/build/[name].min.[fullhash].js',
 			path: path.resolve(__dirname)
 		},
+		target: 'node',
 		module: {
 			rules: [
 				// js babelization
@@ -69,6 +72,7 @@ module.exports = [
 						filename: './assets/css/build/img/[name][ext]',
 					}
 				},
+				// svg
 			]
 		},
 		plugins: [
@@ -83,6 +87,20 @@ module.exports = [
 			new MiniCssExtractPlugin({
 				filename: './assets/css/build/main.min.[fullhash].css'
 			}),
+			new SVGSpritemapPlugin(
+				'./assets/svg/*.svg',
+				{
+					output: {
+						filename: './assets/css/build/sprite.svg'
+					},
+					sprite: {
+						prefix: '',
+						generate: {
+							title: false,
+						}
+					}
+				}
+			),
 		],
 		optimization: {
 			// minification - only performed when mode = production

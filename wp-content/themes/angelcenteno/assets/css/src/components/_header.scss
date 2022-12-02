@@ -1,8 +1,109 @@
+$header-breakpoint: $m;
+
 .site-header {
+    padding: 15px 0;
+
     &__container {
-        @include container(large);
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
     }
     &__logo {
-        font-family: 'Rubik Distressed', cursive;
+        @extend %heading, %heading--xl;
+        font-weight: bold;
+        a {
+            text-decoration: none;
+            &:hover {
+                color: $white;
+                span {
+                    max-width: 1000px;
+                }
+            }
+            span {
+                display: inline-flex;
+                flex-flow: row wrap;
+                align-items: center;
+                overflow: hidden;
+                max-width: 0;
+                transition: max-width $speed*3 $easing;
+            }
+        }
+    }
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        > nav {
+            margin-right: 20px;
+        }
+    }
+    &__social {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        a {
+            display: block;
+            text-decoration: none;
+        }
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+.mobile-menu-button {
+    @include bp($header-breakpoint) {
+        display: none;
+    }
+}
+
+.nav-items {
+    @include fluid($m, $xl, 18px, 20px, 'font-size');
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    li {
+        margin: 0;
+    }
+
+    a {
+        color: $white;
+        text-decoration: none;
+        &:hover {
+            color: $secondary;
+            &:before,
+            &:after {
+                opacity: 1;
+            }
+            &:before {
+                transform: translateX(5px);
+            }
+            &:after {
+                transform: translateX(-5px);
+            }
+        }
+        &:before,
+        &:after {
+            display: inline-block;
+            opacity: 0;
+            transition: $speed $easing;
+            color: $secondary;
+        }
+        &:before {
+            content: '<';
+            padding-right: 15px;
+        }
+        &:after {
+            content: '>';
+            padding-left: 15px;
+        }
     }
 }

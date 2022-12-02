@@ -1,0 +1,14 @@
+{
+    "name": "acf/filtered-grid",
+    "title": "Filtered Grid",
+    "description": "A custom filtered-grid block.",
+    "style": [ "file:./filtered-grid.scss" ],
+    "category": "theme-blocks",
+    "icon": "grid-view",
+    "keywords": ["filtered-grid", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "filtered-grid.php"
+    },
+    "align": "full"
+}

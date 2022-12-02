@@ -37,6 +37,26 @@ class Blocks
 					]
 				]
 			],
+			[
+				'name'            => 'filtered-grid',
+				'title'           => __('Filtered Grid'),
+				'description'     => __('A custom filtered grid block.'),
+				'render_template' => get_template_directory() . '/blocks/filtered-grid/filtered-grid.php',
+				'category'        => 'theme-blocks',
+				'icon'            => 'grid-view',
+				'keywords'        => ['grid', 'filter', 'content'],
+				'supports' => [
+					'align' => false
+				],
+				'example'           => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'is_preview'    => true
+						]
+					]
+				]
+			],
 		];
 
 		$this->init();

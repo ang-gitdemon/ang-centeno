@@ -107,8 +107,10 @@ class Utils
 
 	public static function register_menus()
 	{
-		register_nav_menu('header',__( 'Header Menu' ));
-		register_nav_menu('footer',__( 'Footer Menu' ));
+		register_nav_menus([
+			'header' => __( 'Header Menu', 'angcora' ),
+			'footer' => __( 'Footer Menu', 'angcora' ),
+		]);
 	}
 
 	public static function add_tinymce_editor_styles()
@@ -363,6 +365,17 @@ class Utils
 		}
 
 		return $value;
+	}
+
+	public static function renderIcon(string $string)
+	{
+		$sprite_path = '/assets/css/build/sprite.svg';
+    	if( !file_exists(get_template_directory() . $sprite_path) ) return;
+		$svg = '';
+		$svg .= '<svg shape-rendering="geometricPrecision">';
+		$svg .= '<use xlink:href="' . esc_url( get_template_directory_uri() . $sprite_path ) . '#' . $string .'"></use>';
+		$svg .= '</svg>';
+		return $svg;
 	}
 
 	public static function clean_string ($string)

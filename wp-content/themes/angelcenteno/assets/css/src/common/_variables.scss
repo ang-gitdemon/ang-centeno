@@ -28,13 +28,20 @@ $gray-darker: #2d2e32;
 $gray-dark: #2d2e32;
 $gray: #878787;
 $gray-light: #bbbbbb;
-$gray-lighter: #dadada;
+$gray-lighter: #F7F9FF;
 $white: #fff;
 
 $red: #B01A1A;
+$blue: #4990F9;
+$green: #09B387;
 
 $primary: $gray-darker;
-$secondary: #70e3a1;
+$secondary: #61ECBD;
+$tertiary: $green;
+$accent: $blue;
+
+// Fonts
+$font-primary: 'Source Code Pro', monospace;
 
 // Misc
 $speed: 200ms;

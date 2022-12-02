@@ -1,11 +1,16 @@
 body {
 	background-color: $primary;
+	font-family: $font-primary;
 	color: $white;
 	line-height: 1.2;
 	&.hidden {
 		visibility: hidden;
 		display: none;
 	}
+}
+
+.site-main {
+	transition: $speed $easing;
 }
 
 p, li {
@@ -16,6 +21,10 @@ p, li {
 	&:last-of-type {
 		margin-bottom: 0;
 	}
+}
+
+svg use {
+	fill: currentColor;
 }
 
 em {

@@ -9,24 +9,45 @@ class CustomPostTypes
 	{
 		$this->customPostTypes = [
 			[
-				'slug' => 'testimonial',
-				'single' => 'Testimonial',
-				'plural' => 'Testimonials',
+				'slug' => 'work',
+				'single' => 'Work',
+				'plural' => 'Work',
 				'hierarchical' => false,
 				'supports' => ['title',  'thumbnail'],
 				'taxonomy' => [],
-				'menu_icon' => 'dashicons-editor-quote'
+				'menu_icon' => 'dashicons-portfolio'
 			]
 		];
 
 		$this->customTaxonomies = [
-			// [
-			// 	'slug' => 'activities',
-			// 	'single' => 'Activity',
-			// 	'plural' => 'Activities',
-			// 	'hierarchical' => true,
-			// 	'post_type' => 'resort',
-			// ],
+			[
+				'slug' => 'industry',
+				'single' => 'Industry',
+				'plural' => 'Industries',
+				'hierarchical' => true,
+				'post_type' => 'work',
+			],
+			[
+				'slug' => 'code',
+				'single' => 'Coding Language',
+				'plural' => 'Coding Languages',
+				'hierarchical' => true,
+				'post_type' => 'work',
+			],
+			[
+				'slug' => 'service',
+				'single' => 'Service',
+				'plural' => 'Services',
+				'hierarchical' => true,
+				'post_type' => 'work',
+			],
+			[
+				'slug' => 'tools',
+				'single' => 'Tool',
+				'plural' => 'Tools',
+				'hierarchical' => true,
+				'post_type' => 'work',
+			],
 		];
 	}
 

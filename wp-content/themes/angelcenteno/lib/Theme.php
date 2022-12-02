@@ -93,15 +93,15 @@ class Theme
 		}, 100, 1);
 
 		// accessible menus
-		add_filter('wp_nav_menu', function ($menu_html, $args) {
-			$bad = array('menu', 'navigation', 'nav');
-			$menu_label = $args->menu;
-			$menu_label = strtolower($menu_label);
-			$menu_label = str_replace($bad, '', $menu_label);
-			$menu_label = trim($menu_label);
-			$menu_html = '<nav aria-label="' . $menu_label . '">' . $menu_html . '</nav>';
-			return $menu_html;
-		}, 10, 2);
+		// add_filter('wp_nav_menu', function ($menu_html, $args) {
+		// 	$bad = array('menu', 'navigation', 'nav');
+		// 	$menu_label = $args->menu;
+		// 	$menu_label = strtolower($menu_label);
+		// 	$menu_label = str_replace($bad, '', $menu_label);
+		// 	$menu_label = trim($menu_label);
+		// 	$menu_html = '<nav aria-label="' . $menu_label . '">' . $menu_html . '</nav>';
+		// 	return $menu_html;
+		// }, 10, 2);
 
 		// limit number of post revisions
 		add_filter( 'wp_revisions_to_keep', function($num, $post){
@@ -182,7 +182,7 @@ class Theme
 		add_theme_support('editor-styles');
 		add_theme_support('title-tag');
 		add_theme_support('menus');
-		add_theme_support('post-thumbnails', ['post', 'destination', 'resort', 'testimonial', 'press']);
+		add_theme_support('post-thumbnails', ['post', 'work']);
 	}
 
 	public function my_acf_init()

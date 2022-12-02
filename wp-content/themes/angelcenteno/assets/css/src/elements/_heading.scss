@@ -1,0 +1,29 @@
+%heading,
+.heading {
+    line-height: 1;
+    margin: 0 0 14px;
+
+    &--tag {
+        display: inline-block;
+        background-color: $blue;
+        border-radius: 2px;
+        text-transform: uppercase;
+        padding: 4px;
+    }
+
+    &--xs {
+        @include fluid($m, $xl, 12px, 14px, 'font-size');
+    }
+    &--sm {
+        @include fluid($m, $xl, 14px, 22px, 'font-size');
+    }
+    &--md {
+        @include fluid($m, $xl, 22px, 36px, 'font-size');
+    }
+    &--lg {
+        @include fluid($m, $xl, 36px, 42px, 'font-size');
+    }
+    &--xl {
+        @include fluid($m, $xl, 42px, 58px, 'font-size');
+    }
+}
