@@ -42,8 +42,23 @@ $block_class = 'bloc--' . $blockName;
 				</ul>
 			</div>
 			<?php endif; ?>
+			<?php if($banner_title): ?>
+				<h1 class="heading heading--xl"><?= $banner_title; ?></h1>
+			<?php endif; ?>
+			<?php if($banner_content): ?>
+				<?= $banner_content; ?>
+			<?php endif; ?>
 		</div>
-		<div class="bloc--banner__image"></div>
+		<?php if($banner_image) : ?>
+		<div class="bloc--banner__image">
+			<?= wp_get_attachment_image($banner_image, 'large', false, [
+				'class' => 'pimg',
+				'data-direction' => '+'
+			]); ?>
+			<div class="circle circle--bg pimg" data-direction="-"></div>
+			<div class="circle circle--right pimg" data-direction="+"></div>
+		</div>
+		<?php endif; ?>
 	</div>
 
 </div>

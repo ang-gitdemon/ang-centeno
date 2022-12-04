@@ -1,8 +1,10 @@
 $meta-box-gutter: 15px;
 
 .work {
+    margin-bottom: 50px;
+    
     &__cover {
-        min-height: 70vh;
+        min-height: 75vh;
         position: relative;
         display: flex;
         flex-flow: column wrap;
@@ -62,7 +64,7 @@ $meta-box-gutter: 15px;
             height: 100%;
             object-fit: cover;
             object-position: top center;
-            opacity: 0.9;
+            opacity: 0.99;
             position: relative;
             z-index: 1;
         }

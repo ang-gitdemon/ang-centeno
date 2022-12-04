@@ -57,6 +57,26 @@ class Blocks
 					]
 				]
 			],
+			[
+				'name'            => 'text',
+				'title'           => __('Text'),
+				'description'     => __('A custom text block.'),
+				'render_template' => get_template_directory() . '/blocks/text/text.php',
+				'category'        => 'theme-blocks',
+				'icon'            => 'editor-textcolor',
+				'keywords'        => ['text', 'content'],
+				'supports' => [
+					'align' => false
+				],
+				'example'           => [
+					'attributes' => [
+						'mode' => 'preview',
+						'data' => [
+							'is_preview'    => true
+						]
+					]
+				]
+			],
 		];
 
 		$this->init();

@@ -17,15 +17,16 @@ export class ParallaxImage {
 
     renderParallax = (el) => {
         let direction = el.dataset.direction ?? '-';
+        let speed = el.dataset.speed ?? '50';
         gsap.to(el, {
             scrollTrigger: {
                 trigger: el,
                 start: 'top',
-                // end: 'bottom',
+                end: 'bottom',
                 scrub: 1,
                 invalidateOnRefresh: true // to make it responsive
             }, 
-            y: (i, target) => direction + 150,
+            y: (i, target) => direction + speed,
             ease: "none"
         });
     }

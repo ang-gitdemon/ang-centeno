@@ -1,0 +1,14 @@
+{
+    "name": "acf/text",
+    "title": "Text",
+    "description": "A custom text block.",
+    "style": [ "file:./text.scss" ],
+    "category": "theme-blocks",
+    "icon": "editor-textcolor",
+    "keywords": ["text", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "text.php"
+    },
+    "align": "full"
+}

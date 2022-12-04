@@ -10,7 +10,7 @@
 ?>
 
 <div class="work">
-    <header class="work__cover">
+    <section class="work__cover">
         
         <div class="work__cover-content">
             <h1 class="heading heading--lg"><?= get_the_title(); ?></h1>
@@ -36,12 +36,12 @@
         </div>
 
         <?php if(has_post_thumbnail($post->ID)) : ?>
-        <div class="work__cover-image">
+        <div class="work__cover-image pimg" data-direction="-1">
             <?= get_the_post_thumbnail($post->ID, 'full'); ?>
         </div>
         <?php endif; ?>
-    </header>
-    <main class="work__container container">
+    </section>
+    <section class="work__container container">
         <div class="work__meta">
             <?php if($codes): ?>
             <div class="work__meta-box">      
@@ -80,7 +80,7 @@
             </div>
             <?php endif; ?>
         </div>
-    </main>
+    </section>
 </div>
 
 

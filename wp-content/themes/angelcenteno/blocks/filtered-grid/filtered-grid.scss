@@ -18,8 +18,17 @@
     &__each {
         flex: 0 1 100%;
         max-width: 100%;
+        margin-bottom: 50px;
         @include bp($m) {
             max-width: 50%;
         }
+    }
+    &__each-content {
+        transform: translateY(-50px);
+        background: lighten($primary, 5%);
+        padding: 20px;
+        width: 100%;
+        max-width: 50%;
+        margin: 0 15px 0 auto;
     }
 }

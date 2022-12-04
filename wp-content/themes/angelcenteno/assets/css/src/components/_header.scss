@@ -1,6 +1,8 @@
 $header-breakpoint: $m;
 
 .site-header {
+    display: flex;
+    flex-flow: row wrap;
     padding: 15px 0;
 
     &__container {
